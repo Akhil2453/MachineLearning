@@ -27,6 +27,12 @@ imputer = imputer.fit(x[:, 1:3])
 x[:, 1:3] = imputer.transform(x[:, 1:3])
 
 # Encoding categorical Data
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 labelencoder_x = LabelEncoder()
 x[:, 0] = labelencoder_x.fit_transform(x[:, 0])
+#Use onehot encoder, as there's no comparison between countries, and we don't want the algorithm to compare them
+onehotencoder = OneHotEncoder(categorical_features = [0])
+x = onehotencoder.fit_transform(x).toarray()
+#use label encoder, as we have tocompare the purchases and it's dependent vector
+labelencoder_y = LabelEncoder()
+y = labelencoder_x.fit_transform(y)
