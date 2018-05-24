@@ -36,3 +36,8 @@ x = onehotencoder.fit_transform(x).toarray()
 #use label encoder, as we have tocompare the purchases and it's dependent vector
 labelencoder_y = LabelEncoder()
 y = labelencoder_x.fit_transform(y)
+
+#Splitting the dataset into training and test set
+from sklearn.cross_validation import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 0)
+
