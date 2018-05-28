@@ -41,9 +41,16 @@ y_pred = regressor.predict(x_test) #vector of prediction of dependent variables
 #Visualising the Training set results
 plt.scatter(x_train, y_train, color = 'red')
 plt.plot(x_train, regressor.predict(x_train), color = 'blue')
-        #y co-ordinat will be the predicted salaries of the training set
+        #y co-ordinate will be the predicted salaries of the training set
 plt.title('Salary vs Experience (Training Set)')
 plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
 
+#Visualising the Test set results
+plt.scatter(x_test, y_test, color = 'red')
+plt.plot(x_train, regressor.predict(x_train), color = 'blue')
+plt.title('Salary vs Experience (Test Set)')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()
