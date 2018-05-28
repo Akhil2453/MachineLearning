@@ -30,5 +30,8 @@ x_test = sc_x.transform(x_test)"""
 #not necessary for Simple Linear Regression (this example)
 
 #Fitting Simple Linear Regression to the Trining Set
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
 
+regressor.fit(x_train, y_train)
 
