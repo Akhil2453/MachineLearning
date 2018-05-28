@@ -12,11 +12,11 @@ import pandas as pd
 
 
 #importing the dataset
-dataset = pd.read_csv('Data.csv')
+dataset = pd.read_csv('Salary_Data.csv')
 
 x = dataset.iloc[:, :-1].values   #storing feature data(country,age,salary), in x
                                   #iloc[:, :-1] selects the first three columns of the dataset
-y = dataset.iloc[:, 3].values     # storing dependent vector in y                               
+y = dataset.iloc[:, 1].values     # storing dependent vector in y                               
 
 #Splitting the dataset into training and test set
 from sklearn.cross_validation import train_test_split
