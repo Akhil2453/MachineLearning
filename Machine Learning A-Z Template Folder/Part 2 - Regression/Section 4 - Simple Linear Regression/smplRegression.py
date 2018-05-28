@@ -27,5 +27,8 @@ x_train,  x_test, y_train, y_test = train_test_split(x, y, test_size = 1/3, rand
 sc_x = StandardScaler()
 x_train = sc_x.fit_transform(x_train)
 x_test = sc_x.transform(x_test)"""
-#not necessary in all example
+#not necessary for Simple Linear Regression (this example)
+
+#Fitting Simple Linear Regression to the Trining Set
+
 
