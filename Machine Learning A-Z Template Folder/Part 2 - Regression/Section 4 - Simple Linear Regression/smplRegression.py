@@ -29,9 +29,11 @@ x_train = sc_x.fit_transform(x_train)
 x_test = sc_x.transform(x_test)"""
 #not necessary for Simple Linear Regression (this example)
 
-#Fitting Simple Linear Regression to the Trining Set
+#Fitting Simple Linear Regression to the Trianing Set
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 
 regressor.fit(x_train, y_train)
 
+#Predicting the test set results
+y_pred = regressor.predict(x_test) #vector of prediction of dependent variables
