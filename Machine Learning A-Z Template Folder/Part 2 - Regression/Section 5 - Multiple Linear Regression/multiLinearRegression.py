@@ -15,7 +15,7 @@ dataset = pd.read_csv('50_Startups.csv')
 
 x = dataset.iloc[:, :-1].values   #storing feature data(country,age,salary), in x
                                   #iloc[:, :-1] selects the first three columns of the dataset
-y = dataset.iloc[:, 3].values     # storing dependent vector in y                               
+y = dataset.iloc[:, 4].values     # storing dependent vector in y                               
 
 #Splitting the dataset into training and test set
 from sklearn.cross_validation import train_test_split
